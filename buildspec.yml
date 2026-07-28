@@ -7,16 +7,13 @@ phases:
     commands:
       - echo Installing dependencies...
       - pip install -r requirements.txt
-
   pre_build:
     commands:
       - echo "Starting pre-build phase..."
-
   build:
     commands:
       - echo Running unit tests with pytest...
       - pytest --junittest-xml=reports/test-results.xml --tb=short
-
   post_build:
     commands:
       - echo "Build completed successfully."
